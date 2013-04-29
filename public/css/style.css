@@ -1,0 +1,19 @@
+
+.headerTab{
+	width: 10%;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+
+.headerWrapper{
+	margin-top: 10px;
+}
+.contentWrapper{
+	margin-top:20px;
+}
+
+h1{
+	font-size: 24px;
+	margin-bottom: 0px;
+}

@@ -1,25 +1,29 @@
-    var express = require('express')
-    var router = require('./router')
-    var config = require("./config");
+	// === mvc app entry point ===
+	
+var express = require('express');
+var router = require('./router');
+var config = require('./config');
+var expressLayouts = require('express-ejs-layouts');
 
 
 var app = express();
 
 app.configure(function(){
-    app.use(express.static(__dirname + '/public'));
-    app.set('views', __dirname + '/views');
-    app.set("view options", {
-        layout: true
-    });
+	app.use(express.static(__dirname + '/public'));
+	app.set('views', __dirname + '/views');
+	app.set("view options", {
+		layout: true
+	});
 	app.engine('.html', require('ejs').__express);
 	app.set('view engine', 'html');
-    app.use(express.bodyParser());
-    app.use(express.cookieParser());
-    app.use(express.session({
-        secret: "keyboard cat"
-    }));
-    app.use(express.methodOverride());
-    app.use(app.router);
+	app.use(expressLayouts);
+	app.use(express.bodyParser());
+	app.use(express.cookieParser());
+	app.use(express.session({
+		secret: "keyboard cat"
+	}));
+	//app.use(express.methodOverride());
+	app.use(app.router);
 });
 
 /*
