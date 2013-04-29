@@ -1,7 +1,6 @@
 // === app config file ===
 
 /*
-
 exports.DEBUG_LOG: log  debug info 
 exports.DEBUG_WARN: when there is an abnormality caused by user, e.g. a malicious URL
 exports.DEBUG_ERROR: things should never happen. like a DB error

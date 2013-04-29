@@ -2,19 +2,18 @@
 <html>
 <head>
 	<title>mvc template for node.js, express.js and mysql</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
-	<h1>mvc template</h1>
-	<div class="headerWrapper">
-		<span class='headerTab'><a href="/index">index</a></span>
-		<span class='headerTab'><a href="/login">login</a></span>
-		<span class='headerTab'><a href="/list">list</a></span>
-		<span class='headerTab'><a href="ajax">ajax</a></span>
+	<div class="wrapper">
+		<h1>mvc template</h1>
+		<div class="headerWrapper">
+			<span class='headerTab'><a href="/index">index</a></span>
+			<span class='headerTab'><a href="/login">login</a></span>
+			<span class='headerTab'><a href="/list">list</a></span>
+		</div>
+		<div class="contentWrapper"><%- body %></div>
 	</div>
-	
-	<div class="contentWrapper"><%= body %></div>
-
 </body>
 </html>
 

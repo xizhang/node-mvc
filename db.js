@@ -11,15 +11,15 @@ var pool  = mysql.createPool({
 	database : mvc.config.DB_NAME
 });
 
-exports.query = function(sql, cb){
+exports.query = function(sql, params, cb){
 	pool.getConnection(function(conErr, con) {
 		if(conErr){
 			mvc.error("db connection error", conErr);
 			cb(false);
 		}else{
-			con.query(sql, function(sqlErr, results) {
+			con.query(sql, params, function(sqlErr, results) {
 				if(sqlErr){
-					mvc.error("db error", sqlErr);
+					mvc.error("db error", sql, params, sqlErr);
 					cb(false);
 				}else{
 					cb(results);	
