@@ -22,13 +22,10 @@ app.configure(function(){
 	app.use(express.session({
 		secret: "keyboard cat"
 	}));
-	//app.use(express.methodOverride());
 	app.use(app.router);
 });
 
-/*
-load up settings for environments
-*/
+// --- load up settings for environments
 app.configure('production', 'development', 'testing', function() {
 	config.setEnv(app.settings.env);
 });

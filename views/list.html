@@ -1,8 +1,13 @@
-<form name="input" action="list/create" method="get">
-	<%= msg%>
+<a href="/list/index">refresh page</a>
+<div><%= msg%></div>
+
+<form name="input" action="/list/create" method="get">
 	<%if (empty){%>
 		<button>create DB table</button>
 	<%}else{%>
 
 	<%}%>
+</form>
+<form name="input" action="/list/drop" method="get">
+		<button>Drop</button>
 </form>

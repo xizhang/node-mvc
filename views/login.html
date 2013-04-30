@@ -1,0 +1,11 @@
+<%= msg%>
+<%if(login){%>
+	<form name="input" action="/login/logout" method="post">
+		<button>log out</button>
+	</form>
+<%}else{%>
+	<form name="input" action="/login/" method="post">
+		<input name = "password"></input>
+		<button>log in</button>
+	</form>
+<%}%>
